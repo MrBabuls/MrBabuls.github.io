@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>GameJam - Noora Karhulahti</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="Game-Controller.ico" type="image/x-icon">
+    <link rel="icon" href="Game-Controller.ico" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+            
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/controller.png" alt="Homepage"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html#home" title="home">Home</a></li>
+                <li class="current"><a href="blog.html" title="projects">Projects</a></li>	
+            </ul>
+        </nav>
+
+    </header> <!-- end s-header -->
+
+
+    <article class="blog-single">
+
+        <!-- page header/blog hero
+        ================================================== -->
+        <div class="page-header page-header--single page-hero" style="background-image:url(images/sunset.png)">
+        
+            <div class="row page-header__content narrow">
+                <article class="col-full">
+                    <div class="page-header__info">
+                    </div>
+                    <h1 class="page-header__title">
+                        <p >
+                            XAMK Game Jam II.
+                        </p>
+                    </h1>
+                    <ul class="page-header__meta">
+                        <li class="date">December 18, 2022</li>
+
+                    </ul>
+                    
+                </article>
+            </div>
+        </div> <!-- end page-header -->
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+
+                <h2 class="lead">Project description </h2>
+                
+                <p>
+                    The game was made as part of Xamk Game Jam II 2022, which was organized from 25 November to 27 November 2022. 
+                    The team included Tarita Karhulahti, Riku Heino and Harto Kuukka and we had 48 hours’ time to create a game that fit the predetermined theme. 
+                    The theme of these game jams was "willpower". On the first day we started planning our game and we ended up with CODE COMMIT COFFEE PROFIT where the player trying to survive the whole weekend of game jam and not to destroy the computer. 
+                    Player has MIKÄ OLI AIKA PELISSÄ minutes to complete all task before time runs out and keep willpower level low or otherwise the game ends. 
+                    The goal of the game is to survive for a game jam and complete all task before time runs out. When the plan was completed then we shared the work tasks to everyone. 
+                    My task was to program the movement for the character head, events, and I made the main menu. On Friday, we planned the game, and little bit started
+                    to make the game, and on Saturday the work continued. On Sunday, we made small additions, fine-tuned the game, and assembled the game. 
+                </p>
+
+                <p>
+                <img src="images/CODE-image.png" 
+                     srcset="images/CODE-image.png 2000w" 
+                     sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                </p>
+
+                <h2>Description of the task</h2>
+
+                <p> 
+                    My task in the team was to program the game. I was responsible for making the UI, events for the game and the movement for the character.
+                    After I got my tasks done, I started helping with the animation. 
+                    I made the movement for the characters when character grab a coffee cup and drink it. I also added music and sound effects to the project.
+
+                </p>
+
+                <h2>Description of methods</h2>
+                <p> 
+                    In the game, the player moves the characters head with mouse and fixes the problems that emerges in the game. 
+                    There were four types of events, which were GIT hub, code writing, coffee drinking and MIKÄ OLI VIMPPO EVENTTI. 
+                    In the GIT hub, the player has to tap left mouse button on commit and then push. Writing a code, the player has to tap a tab. 
+                    When the eyes get fussy, the player needs to drink a coffee, player has to click left mouse button a cup. 
+                    The most important thing in the game is to survive the game jam, complete all task before time runs out and put your willpower level low enough not to brake computer.
+                </p>
+<pre><code>
+code {
+    using UnityEngine;
+
+public class RotateCamera : MonoBehaviour
+{
+    public float speedH = 2.0f;
+    public float speedV = 3.0f;
+    public Vector3 min;
+    public Vector3 max;
+
+    private float yaw = 2.0f;
+    private float pitch = 2.0f;
+  
+    void Update()
+    {
+        MouseRotate();
+    }
+
+    private void MouseRotate()
+    {
+        yaw += speedH * Input.GetAxis("Mouse X");
+        pitch -= speedV * Input.GetAxis("Mouse Y");
+
+        //Min max for horizontal
+        yaw = Mathf.Clamp(yaw, 120f, 240f);
+        //Min max for vertical
+        pitch = Mathf.Clamp(pitch, -20f, 40f);
+
+        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+    }
+}
+}
+</code></pre>
+
+                <p> From the code above, you can see the character head movement in the game.</p>
+                <h2>Problems and solutions</h2>
+
+                <p> 
+                    My biggest problem was merge conflicts because we touched same base classes, same scene and same prefabs.
+                    We resolve merge conflicts together by choosing with changes we take and which we redo.
+                </p>
+
+                <h2>Final assessment</h2>
+
+                <p> 
+                    I'm really happy how functional and funny game we made during the game jam.
+                    I enjoy being involved in planning of the game and programming it. I learned a lot of new things from the team members.
+                </p>
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__all">
+                        <a href="blog.html" class="btn btn--primary">
+                            View All Post
+                        </a>
+                    </div>
+                </div>
+                <div class="col-six tab-full">
+
+                    <h3>Responsive video</h3>
+        
+                    <div class="video-container">
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/43we9eBQ_UQ" frameborder="0" allowfullscreen></iframe>
+                    </div>
+        
+                </div>
+
+            </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </article>
+    <!-- footer
+    ================================================== -->
+    <footer>
+            <div class="row">
+                <div class="col-full">
+    
+                    <div class="footer-logo">
+                        <a class="footer-site-logo" href="#0"><img src="images/controller.png" alt="Homepage"></a>
+                    </div>    
+                </div>
+            </div>
+    
+            <div class="row footer-bottom">
+    
+                <div class="col-twelve">
+                    <div class="copyright">
+                        <span>© Copyright Noora Karhulahti 2022</span> 
+                        <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>	
+                    </div>
+    
+                    <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+    
+            </div> <!-- end footer-bottom -->
+    
+        </footer> <!-- end footer -->
+    
+    
+        <div id="preloader"> 
+            <div id="loader"></div>
+        </div>
+    
+    
+        <!-- Java Script
+        ================================================== -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+</body>
+
+</html>
