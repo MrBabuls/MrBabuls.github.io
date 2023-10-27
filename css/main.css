@@ -3753,7 +3753,9 @@ article.blog-single .blog-content {
 
 .blog-content__main img {
     max-width: 1000px;
-    margin: 3rem 0 3rem -6rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -3925,7 +3927,9 @@ article.blog-single .blog-content {
     }
     .blog-content__main img {
         max-width: 900px;
-        margin: 3rem 0 3rem -5rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -3939,7 +3943,9 @@ article.blog-single .blog-content {
     }
     .blog-content__main img {
         max-width: 800px;
-        margin: 3rem 0 3rem -4rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     .blog-content__prev, .blog-content__next {
         width: 100%;
@@ -3957,7 +3963,9 @@ article.blog-single .blog-content {
     }
     .blog-content__main img {
         max-width: 100%;
-        margin: 3rem 0 3rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
