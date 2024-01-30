@@ -389,6 +389,15 @@ input[type="password"], textarea {
     margin-right: -20px;
 }
 
+.rowpictures{
+    display: flex;
+}
+
+.column{
+    flex: 50%;
+    padding: 5px;
+}
+
 
 /* column blocks
  * -------------------------------------- */
