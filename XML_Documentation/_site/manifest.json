@@ -2,11 +2,11 @@
   "sitemap": {
     "fileOptions": {
       "api/*": {
-        "baseUrl": "https://normanderwan.github.io/DocFxForUnity/",
+        "baseUrl": "https://mrbabuls.github.io/XML_Documentation/",
         "changefreq": "daily"
       }
     },
-    "baseUrl": "https://normanderwan.github.io/DocFxForUnity/",
+    "baseUrl": "https://mrbabuls.github.io/XML_Documentation/",
     "changefreq": "weekly"
   },
   "source_base_path": "C:/Users/noora/Downloads/EPO_design_patterns/EPO_design_patterns/Documentation",
