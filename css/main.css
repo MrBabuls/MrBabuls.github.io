@@ -3481,7 +3481,7 @@ article.blog-single .blog-content {
  * ------------------------------------------------------------------- */
 
 .page-header {
-    background: radial-gradient(circle, #1b1d25 0%, #090a0b 40%);
+    background: radial-gradient(circle, #1b1d25 0%, #090a0b 30%);
     background-repeat: no-repeat;
     background-position: center, center;
     padding-top: 20.4rem;

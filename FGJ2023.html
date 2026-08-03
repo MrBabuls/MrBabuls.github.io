@@ -49,19 +49,19 @@
 
         <nav class="header-nav-wrap">
             <ul class="header-nav">
-                <li><a href="index.html#home" title="home">Home</a></li>
-                <li class="current"><a href="blog.html" title="projects">Projects</a></li>	
+                <li><a href="index.html#home" title="Home">Home</a></li>
+                <li class="current"><a href="blog.html" title="Projects">Projects</a></li>	
             </ul>
         </nav>
 
     </header> <!-- end s-header -->
 
 
-    <article class="blog-single">
+    <article>
 
         <!-- page header/blog hero
         ================================================== -->
-        <div class="page-header page-header--single page-hero" style="background-image:url(images/sunset.png)">
+        <div class="page-header page-header--single page-hero">
         
             <div class="row page-header__content narrow">
                 <article class="col-full">
@@ -88,7 +88,7 @@
                 
                 <p>
                     The game was made as part of Finnish Game Jam 2023, which was organized from 3 February to 5 February 2023. 
-                    The team included Tarita Karhulahti, Riku Heino, Harto Kuukka and Joonas Vuorela and we had 48 hours’ time to create a game that fit the predetermined theme which was a “roots”. 
+                    We had 48 hours’ time to create a game that fit the predetermined theme which was a “roots”. 
                     On the first day we started to plan our game and we decided to do Attack of the Unrooters. 
                     Players need to help Bellroot to defence it´s flowerpot from evil Unrooters. 
                     Collect seed packs to fill your ammos and when times up jump back your flowerpot and be ready to shoot those Unrooters. 
@@ -102,140 +102,6 @@
                     My task in the team was to be one of the programmers in the game jam. I was responsible for making the UI, enemy AI and game level.
                 </p>
 
-                <h2>Description of methods</h2>
-                <p>
-                    In the game, the player moves the character using keyboard WASD and mouse. 
-                    Main event are the waves of the game, which becomes more challenging as the game progresses and more enemies appear. 
-                    As each wave progresses, you get a reward for completing the wave, which is player can collect seed bags.
-                </p>
-
-                <pre><code>
-    public class enemyAI : MonoBehaviour
-    {
-        public NavMeshAgent agent;
-    
-        public Transform flowerPot;
-    
-        public IntVariable flowerhp;
-    
-        public ParticleSystem deathEffect;
-    
-        public ParticleSystem bornEffect;
-    
-        public int health = 3;
-    
-    
-        public Animator anim;
-    
-        AddScore score;
-    
-        bool isDead = false;
-    
-        protected void Awake()
-        {
-            flowerPot = GameObject.Find("FlowerPot").transform;
-            agent = GetComponentNavMeshAgent();
-            anim= GetComponentAnimator();
-            bornEffect.gameObject.SetActive(true);
-            bornEffect.gameObject.transform.parent = null;
-            bornEffect.Stop(true);
-            bornEffect.Play(true);
-            anim.SetBool("isEnemy", true);
-            score = GetComponentAddScore();
-        }
-    
-        protected void Update()
-        {
-    
-            ChasePlayer();
-    
-            if (agent.stoppingDistance < 2f)
-            {
-                AttackPlayer();
-            }
-        }
-    
-        private void ChasePlayer()
-        {
-            anim.SetBool("isWalking", true);
-            anim.SetBool("isAttacking", false);
-            agent.isStopped = false;
-            agent.SetDestination(flowerPot.position);   
-        }
-    
-        private void AttackPlayer()
-        {
-            anim.SetBool("isWalking", false);
-            anim.SetBool("isAttacking", true);
-            agent.isStopped = true;
-    
-            transform.LookAt(flowerPot);
-    
-            flowerhp.Value--;
-    
-        
-            deathEffect.gameObject.transform.parent= null;
-            PlayDeathEffect();
-            score.Subtract();
-            GameManager.instance.CheckForDeadEnemy();
-    
-            EnemyManager.instance.CountDeathEnemies();
-            Destroy(gameObject);
-        }
-    
-        public void TakeDamage (int amount)
-        {
-            health -= amount;
-            if (health <= 0 && !isDead)
-            {
-                agent.enabled = false;
-                isDead = true;
-    
-                GameManager.instance.CheckForDeadEnemy();
-    
-                deathEffect.gameObject.transform.parent = null;
-                PlayDeathEffect();
-                score.Add();
-    
-                EnemyManager.instance.CountDeathEnemies();
-                
-                Destroy(gameObject);
-            }
-        }
-    
-        private void PlayDeathEffect()
-        {
-            SoundEngine.instance.PlaySoundAt("enemy_death", transform.position,null,1);
-            deathEffect.gameObject.SetActive(true);
-            deathEffect.Stop(true);
-            deathEffect.Play(true);
-        }
-    
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.gameObject.CompareTag("FlowerPot"))
-            {
-                AttackPlayer();
-            }
-        }
-    }
-                    </code></pre>
-
-                <p>From the code above, you can see the enemy AI in game.</p>
-
-                <h2>Problems and solutions</h2>
-
-                <p> 
-                    Our team biggest problem was communication. 
-                    The opinion of how the final game would look and work was very different from the opinion of some of our team. We solve the problem by voting.
-                </p>
-
-                <h2>Final assessment</h2>
-
-                <p> 
-                    I’m really proud how funny and great game we created during the game jam. 
-                    The team members help me a lot and I learned new things and most importantly I got to repeat the previous game jams.
-                </p>
                 <div class="blog-content__pagenav">
                     <div class="blog-content__all">
                         <a href="blog.html" class="btn btn--primary">
@@ -248,7 +114,7 @@
                     <h3>Responsive video</h3>
         
                     <div class="video-container">
-                        <iframe width="420" height="315" src="https://www.youtube.com/embed/VjiYkFdCerc?si=9q6CvNw2D5COjtlA" title="Attack of the Unrooters" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/VjiYkFdCerc" title="Attack of the Unrooters" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
 
