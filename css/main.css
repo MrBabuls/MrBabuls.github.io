@@ -4325,14 +4325,14 @@ article.blog-single .blog-content {
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     .folio-list .folio-item {
         flex: 0 0 50%;
         max-width: 50%;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
     .folio-list .folio-item {
         flex: 0 0 100%;
         max-width: 100%;
