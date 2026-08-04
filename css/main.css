@@ -4333,10 +4333,3 @@ article.blog-single .blog-content {
         max-width: 100%;
     }
 }
-
-@media screen and (min-width: 601px) and (max-width: 900px) {
-    .folio-list .folio-item {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
