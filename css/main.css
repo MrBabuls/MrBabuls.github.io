@@ -4334,3 +4334,23 @@ article.blog-single .blog-content {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    .s-resume__section {
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .s-resume__section .large-3,
+    .s-resume__section .large-9 {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .s-resume__section .large-3 {
+        margin-bottom: 20px;
+    }
+}
