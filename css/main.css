@@ -110,7 +110,210 @@ a:focus {
     outline: none;
 }
 
+/* ------------------------------------------------------------------- 
+ * ## resume section 
+ * ------------------------------------------------------------------- */
 
+ .s-resume {
+    padding-top: calc(6 * var(--space));
+    padding-bottom: var(--vspace-4);
+}
+
+.s-resume__section {
+    display: flex;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #555;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+
+.s-resume__section .large-3 {
+    width: 25%;
+    flex: 0 0 25%;
+}
+
+.s-resume__section .large-9 {
+    width: 75%;
+    flex: 0 0 75%;
+}
+
+.section-header-allcaps {
+    display: inline-block;
+    font-size: var(--text-size);
+    line-height: var(--vspace-1_25);
+    text-transform: uppercase;
+    letter-spacing: .25em;
+    padding-left: .25em;
+    padding-bottom: .1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    font-weight: bold;
+}
+
+.section-header-allcaps:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color:#6defc1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.resume-block {
+    margin-bottom: var(--vspace-1_75);
+}
+
+.resume-block__header-meta {
+    font-family: var(--font-2);
+    font-size: calc(var(--text-size) * 1.1111);
+    font-style: italic;
+    margin-top: -.4rem;
+    margin-bottom: var(--vspace-0_75);
+}
+
+.resume-block__header-date {
+    display: inline-block;
+    font-family: "montserrat-medium", sans-serif;
+    font-size: 1.1rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: #888888;
+}
+
+.resume-block__header-date::before {
+     content: "\2022";
+    color: #ffffff;
+    display: inline-block;
+    margin: 0 1rem;
+    vertical-align: middle;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## projects images
+ * ------------------------------------------------------------------- */
+
+.folio-list {
+    max-width: 950px;
+    margin: var(--vspace-2_5) auto 0;
+}
+
+.folio-list .folio-item {
+    padding: 10px;
+}
+
+.folio-item__thumb::before {
+    z-index: 1;
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all, .5s;
+    transition: all, .5s;
+}
+
+.folio-item__thumb::after {
+    z-index: 1;
+    content: "+";
+    font-family: var(--font-2);
+    font-weight: 300;
+    font-size: 3rem;
+    color: white;
+    display: block;
+    height: 32px;
+    width: 32px;
+    line-height: 32px;
+    margin-left: -16px;
+    margin-top: -16px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.folio-item:hover .folio-item__thumb::after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.folio-item:hover .folio-item__thumb::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+a:hover, a:active {
+    outline: 0;
+}
+
+.folio-item__thumb {
+    display: block;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-large-1-4>.column {
+    -ms-flex: 0 0 25%;
+    -webkit-box-flex: 0;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.column {
+    -ms-flex: 1 1 0%;
+    -webkit-box-flex: 1;
+    flex: 1 1 0%;
+    padding: 0 var(--gutter-lg);
+}
+
+.collapse>.column, .column.collapse {
+    padding: 0;
+}
+
+.folio-item:hover .folio-item__thumb::after {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.folio-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 3%;
+}
+
+.roww {
+    width: 50%;
+    max-width: var(--width-grid-max);
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+}
 
 /* ===================================================================
  * # typography & general theme styles - (_document-setup.scss) 
@@ -126,7 +329,7 @@ h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
 }
 
 h1, .h01, h2, .h02, h3, .h03, h4, .h04 {
-    margin-top: 6rem;
+
     margin-bottom: 1.8rem;
 }
 
@@ -496,6 +699,7 @@ form,
 .video-container, 
 .ss-custom-select {
     margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 
