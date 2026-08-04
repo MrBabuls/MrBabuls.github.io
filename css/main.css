@@ -203,6 +203,8 @@ a:focus {
 }
 
 .folio-list .folio-item {
+    flex: 0 0 25%;
+    max-width: 25%;
     padding: 10px;
 }
 
@@ -4327,14 +4329,14 @@ article.blog-single .blog-content {
 
 @media screen and (max-width: 600px) {
     .folio-list .folio-item {
-        flex: 0 0 50%;
-        max-width: 50%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 601px) and (max-width: 900px) {
     .folio-list .folio-item {
-        flex: 0 0 100%;
-        max-width: 100%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
