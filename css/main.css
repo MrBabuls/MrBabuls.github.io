@@ -304,15 +304,10 @@ a:hover, a:active {
 
 .roww {
     width: 50%;
-    max-width: var(--width-grid-max);
-    margin: 0 auto;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-flow: row wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-flow: row wrap;
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+flex-flow: row wrap;
 }
 
 /* ===================================================================
