@@ -4385,5 +4385,9 @@ article.blog-single .blog-content {
     .blog-content__pagenav .btn {
         width: 100%;
         text-align: center;
+        font-size: 0.9rem;
+        letter-spacing: 0.15rem;
+        padding: 0 1rem;
+        white-space: normal;
     }
 }
