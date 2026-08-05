@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>GameJam - Noora Karhulahti</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="Game-Controller.ico" type="image/x-icon">
+    <link rel="icon" href="Game-Controller.ico" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+            
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/controller.png" alt="Homepage"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html#home" title="Home">Home</a></li>
+                <li><a href="index.html#resume" title="Resume">Resume</a></li>
+                <li><a href="index.html#projects" title="Projects">Projects</a></li>
+            </ul>
+        </nav>
+
+    </header> <!-- end s-header -->
+
+
+    <article>
+
+        <!-- page header/blog hero
+        ================================================== -->
+        <div class="page-header page-header--single page-hero">
+        
+            <div class="row page-header__content narrow">
+                <article class="col-full">
+                    <div class="page-header__info">
+                    </div>
+                    <h1 class="page-header__title">
+                        <p >
+                            Bachelor's Thesis
+                        </p>
+                    </h1>
+                    <ul class="page-header__meta">
+                        <li class="date">
+                            August 5, 2026
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div> <!-- end page-header -->
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+
+                <h2 class="lead">Procedural building generation tool in the Unreal Engine 5 game engine</h2>
+                    <ul class="project-details">
+                        <li><strong>Engine:</strong> Unreal Engine 5 (Blueprints)</li>
+                        <li><strong>Tools:</strong> Unreal Engine 5, Blender, Adobe Substance Designer</li>
+                        <li><strong>Project Type:</strong> Bachelor's Thesis</li>
+                        <li><strong>Duration:</strong> 7 months</li>
+                    </ul>
+
+                <div class="rowpictures">
+                    <div class="column">
+                        <img src="images/Theses/PBG_gif.gif" 
+                         srcset="images/Theses/PBG_gif.gif 800w" 
+                         sizes="(max-width: 3000px) 100vw, 3000px" alt="">
+                    </div>
+                </div>
+                <p>
+                    The following demonstration shows how the procedural building generation tool creates structures automatically using modular assets and spline-based placement.
+                </p>
+
+                <h2 class="lead">Overview</h2>
+                <p>
+                    This project was developed as part of my Bachelor's thesis in Game Programming at South-Eastern Finland University of Applied Sciences - Xamk. The goal was to create a procedural building generation tool in Unreal Engine 5 that enables users to generate and modify modular buildings efficiently within a virtual city environment.
+                </p>
+                <p>
+                    The tool combines spline-based placement, modular building pieces, and a rule-based grammar system to automatically generate buildings while reducing manual content creation. The entire system was developed using Unreal Engine 5 Blueprints.
+                </p>
+
+                <h2 class="lead">Procedural Generation</h2>
+                <p>
+                    The tool generates buildings by combining modular assets along a spline. A rule-based grammar system controls the placement of different building modules, allowing users to quickly create unique building layouts while maintaining a consistent architectural style.
+                </p>
+                <div class="rowpictures">
+                    <div class="column">
+                        <img src="images/Theses/PBG.png" 
+                         srcset="images/Theses/PBG.png 800w" 
+                         sizes="(max-width: 3000px) 100vw, 3000px" alt="">
+                         <p>
+                            The image demonstrates the internal logic of the procedural generation system. Each spline point is assigned an index, which defines the order of the building segments. The segments between the points are controlled by grammar rules that determine which modular assets are placed during generation.
+                         </p>
+                    </div>
+                </div>
+
+                <h2 class="lead">Modular Assets</h2>
+                <p>
+                    All building modules were modeled in Blender specifically for this project. The modular workflow allows different wall, door and window pieces to be reused across multiple buildings.
+                </p>
+                <div class="rowpictures">
+                    <div class="column">
+                        <img src="images/Theses/ModularKit.png" 
+                         srcset="images/Theses/ModularKit.png 800w" 
+                         sizes="(max-width: 3000px) 100vw, 3000px" alt="">
+                         <p></p>
+                    </div>
+                </div>
+
+                <h2 class="lead">Texture Creation</h2>
+                <p>
+                    A brick texture was created in Adobe Substance Designer for the modular building assets. The texture workflow included creating Albedo, Normal, Height, and Roughness maps to define the surface details and appearance of the brick material.
+                </p>
+                <div class="rowpictures">
+                    <div class="column">
+                        <img src="images/Theses/Textures.png" 
+                         srcset="images/Theses/Textures.png 800w" 
+                         sizes="(max-width: 3000px) 100vw, 3000px" alt="">
+                    </div>
+                </div>
+
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__all">
+                        <a href="https://www.theseus.fi/handle/10024/921840" class="btn btn--primary" target="_blank">
+                        View Bachelor's Thesis (Finnish)
+                    </a>
+                    </div>
+                </div>
+            </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </article>
+    <!-- footer
+    ================================================== -->
+    <footer>
+            <div class="row">
+                <div class="col-full">
+    
+                    <div class="footer-logo">
+                        <a class="footer-site-logo" href="#0"><img src="images/controller.png" alt="Homepage"></a>
+                    </div>    
+                </div>
+            </div>
+    
+            <div class="row footer-bottom">
+    
+                <div class="col-twelve">
+                    <div class="copyright">
+                        <span>© Copyright Noora Karhulahti 2022</span> 
+                        <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>	
+                    </div>
+    
+                    <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+    
+            </div> <!-- end footer-bottom -->
+    
+        </footer> <!-- end footer -->
+    
+    
+        <div id="preloader"> 
+            <div id="loader"></div>
+        </div>
+    
+    
+        <!-- Java Script
+        ================================================== -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+</body>
+
+</html>
