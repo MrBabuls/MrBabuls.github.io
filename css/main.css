@@ -2351,10 +2351,7 @@ html.no-csstransitions .home-content__main {
         bottom: -9rem;
     }
     .home-social {
-        padding-bottom: 10.8rem;
-    }
-    .home-social::after {
-        height: 10.2rem;
+        display: none;
     }
 }
 
@@ -2375,7 +2372,7 @@ html.no-csstransitions .home-content__main {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
     .home-content {
         vertical-align: middle;
     }
@@ -3531,6 +3528,7 @@ footer a:hover, footer a:focus {
 }
 
 .footer-social {
+    display: none;
     list-style: none;
     margin-top: 3rem;
     margin-left: 0;
@@ -3647,23 +3645,41 @@ footer a:hover, footer a:focus {
  * ------------------------------------------------------------------- */
 
 @media only screen and (max-width: 600px) {
-    .footer-social li {
-        margin-right: 1.8rem;
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        list-style: none;
+        margin: 3rem 0 0;
+        padding: 0;
     }
-    .footer-social li span, .footer-social li::after {
+
+    .footer-social li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+    }
+
+    /* poistaa | merkit */
+    .footer-social li::after {
         display: none;
     }
+
+    /* piilottaa LinkedIn, ArtStation jne. tekstit */
+    .footer-social span {
+        display: none;
+    }
+
     .footer-social li i {
         font-size: 2.4rem;
+        line-height: 1;
     }
-    .footer-bottom {
-        padding-bottom: .6rem;
-    }
-    .footer-bottom .copyright span {
-        display: block;
-    }
-    .footer-bottom .copyright span::after {
-        display: none;
+
+    .footer-social a {
+        color: #FFFFFF;
     }
 }
 
