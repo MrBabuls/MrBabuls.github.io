@@ -39,7 +39,7 @@
 
 
 <body id="top">
-
+    <div class="cursor-glow"></div>
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -200,6 +200,37 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-</body>
+        <script>
+    const glow = document.querySelector('.cursor-glow');
 
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+
+    let currentX = mouseX;
+    let currentY = mouseY;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateGlow() {
+        currentX += (mouseX - currentX) * 0.08;
+        currentY += (mouseY - currentY) * 0.08;
+
+        glow.style.background = `
+            radial-gradient(
+                600px at ${currentX}px ${currentY}px,
+                rgba(29, 78, 216, 0.15),
+                transparent 80%
+            )
+        `;
+
+        requestAnimationFrame(animateGlow);
+    }
+
+    animateGlow();
+</script>
+
+</body>
 </html>
