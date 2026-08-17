@@ -4027,6 +4027,12 @@ article.blog-single .blog-content {
  * blog page header
  * ------------------------------------------------------------------- */
 
+@media screen and (min-width: 1200px) {
+    .page-header {
+        background: radial-gradient(circle, #1b1d25 0%, #090a0b 25%);
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .page-header__content {
         max-width: 800px;
