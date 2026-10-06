@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Project - Noora Karhulahti</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="Icon.ico" type="image/x-icon">
+    <link rel="icon" href="Icon.ico" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+    <div class="cursor-glow"></div>
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+            
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/SVG/Controller4.svg" alt="Homepage"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+                <ul class="header-nav">
+                    <li><a href="index.html#home" title="Home">Home</a></li>
+                    <li><a href="index.html#resume" title="Resume">Resume</a></li>
+                    <li><a href="index.html#projects" title="Projects">Projects</a></li>
+                </ul>
+            </nav>
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+    </header> <!-- end s-header -->
+
+
+    <article>
+
+        <!-- page header/blog hero
+        ================================================== -->
+        <div class="page-header page-header--single page-hero">
+        
+            <div class="row page-header__content narrow">
+                <article class="col-full">
+                    <div class="page-header__info">
+                    </div>
+                    <h1 class="page-header__title">
+                        <p >
+                            GEP-Engine
+                        </p>
+                    </h1>
+                    <ul class="page-header__meta">
+                        <li class="date">
+                            October 5, 2026
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div> <!-- end page-header -->
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+
+                <h2 class="lead">Custom Game Engine in C++</h2>
+                
+                <p>
+                    GEP-Engine is a custom game engine developed in C++.
+                </p>
+                <p>
+                    The project originally started as a school project during a Game Engine Programming course in September–December 2025, where the engine was developed throughout the course.
+                </p>
+                <p>
+                    After the course ended, I continued developing the engine independently to further improve my C++ programming skills and explore game engine architecture and development.
+                </p>
+
+                <p>
+                <img src="images/Gifs/GEP/GEP_1.gif"
+                     sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                </p>
+                <p> 
+                    The following demonstration shows the engine running and demonstrating the current gameplay and rendering systems.
+                </p>
+                <h2 class="lead">Technologies</h2>
+                    <ul class="project-details">
+                        <li>C++</li>
+                        <li>CMake</li>
+                        <li>SDL3</li>
+                        <li>SDL_image</li>
+                        <li>SDL_image</li>
+                        <li>OpenGL</li>
+                        <li>GLAD</li>
+                        <li>GLM</li>
+                        <li>nlohann/json</li>
+                    </ul>
+                    <p>
+                        CMake is used as the build system, while SDL3 handles windowing and input-related functionality. OpenGL is used for rendering, with GLAD providing the OpenGL function loading. GLM is used for mathematical operations, and nlohmann/json is used for scene serialization.
+                    </p>
+                    <h2 class="lead">Engine Systems</h2>
+                    <p>
+                        The engine includes several core systems designed to work together as a modular architecture.
+                    </p>
+                    <h2 class="lead">Scene Managment</h2>
+                    <p>
+                        The engine supports creating and switching between scenes. Scenes can also be serialized and loaded using JSON, allowing game data to be stored outside the code.
+                    </p>
+                    <h2 class="lead">Game Object and Component System</h2>
+                    <p>
+                        Game objects use a component-based architecture. Components can be registered, created, serialized, and deserialized, making it easier to add new functionality without tightly coupling everything together.
+                    </p>
+                    <h2 class="lead">Resourrce Managment</h2>
+                    <p>
+                        A resource management system handles loading and caching assets so that resources can be reused instead of being loaded multiple times.
+                    </p>
+                    <h2 class="lead">Input and Timing</h2>
+                    <p>
+                        The engine includes input management as well as delta-time and frame-timing functionality. These systems provide the foundation for responsive gameplay and frame-independent movement.
+                    </p>
+                    <h2 class="lead">Rendering</h2>
+                    <p>
+                        The rendering system is built on OpenGL and currently focuses on 2D rendering.
+                    </p>
+                    <ul class="project-details">
+                        <li>2D sprite rendering</li>
+                        <li>Texture loading and management</li>
+                        <li>Shader compilation and management</li>
+                        <li>Orthographic cameras</li>
+                        <li>Sprite transformations</li>
+                        <li>Sprite layering</li>
+                        <li>Sprite color modification</li>
+                        <li>UV offset and scaling</li>
+                        <li>Horizontal sprite flipping</li>
+                        <li>Resizable windows and viewports</li>
+                    </ul>
+                    <p>
+                        Working directly with OpenGL has been particularly useful for understanding the rendering pipeline and how textures, shaders, cameras, and transformations work together.
+                    </p>
+                    <h2 class="lead">Gameplay Systems</h2>
+                    <p>
+                        The engine also contains several gameplay systems that were developed to test and demonstrate the underlying engine architecture.
+                    </p>
+                    <ul class="project-details">
+                        <li>Player movement</li>
+                        <li>Player health</li>
+                        <li>Player weapon system</li>
+                        <li>Pickup system</li>
+                        <li>Respawn system</li>
+                        <li>UI button system</li>
+                    </ul>
+                    <p>
+                        The course was not only about developing the engine itself, but also about using it to create a game. This gave the opportunity to test the engine's systems in a practical project and see how well the architecture worked when building an actual game.
+                    </p>
+
+
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__all">
+                        <a href="https://github.com/MrBabuls/GEP-Engine" class="btn btn--primary" target="_blank">
+                            GitHub repository
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </article>
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+                <ul class="footer-social">
+                    <li>
+                        <a href="https://www.linkedin.com/in/noora-karhulahti-74a6a024b/"><i class="im im-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.artstation.com/noorabirgit"><i class="fa-brands fa-artstation" aria-hidden="true" ></i><span>ArtStation</span></a> 
+                    </li>
+                    <li>
+                        <a href="https://github.com/MrBabuls"><i class="im im-github" aria-hidden="true" ></i><span>GitHub</span></a>               
+                    </li>
+                    <li>
+                        <a href="https://norbit.itch.io/"><i class="fa-brands fa-itch-io" aria-hidden="true" ></i><span>Itch.io</span></a>               
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/noorabirgit.art/"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <div class="row footer-bottom">
+    
+                <div class="col-twelve">
+                    <div class="copyright">
+                        <span>© Copyright Noora Karhulahti 2022</span> 
+                        <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>	
+                    </div>
+    
+                    <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+    
+            </div> <!-- end footer-bottom -->
+    
+        </footer> <!-- end footer -->
+    
+    
+        <div id="preloader"> 
+            <div id="loader"></div>
+        </div>
+    
+    
+        <!-- Java Script
+        ================================================== -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+    const glow = document.querySelector('.cursor-glow');
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+
+    let currentX = mouseX;
+    let currentY = mouseY;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateGlow() {
+        currentX += (mouseX - currentX) * 0.08;
+        currentY += (mouseY - currentY) * 0.08;
+
+        glow.style.background = `
+            radial-gradient(
+                600px at ${currentX}px ${currentY}px,
+                rgba(29, 78, 216, 0.15),
+                transparent 80%
+            )
+        `;
+
+        requestAnimationFrame(animateGlow);
+    }
+
+    animateGlow();
+</script>
+
+</body>
+</html>
